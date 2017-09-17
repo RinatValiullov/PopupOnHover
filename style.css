@@ -10,12 +10,14 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
   line-height: 1.2;
   position: relative;
 }
 
 /*Text*/
 .wrapper{
+  color: #40414c;
   padding: 10px;
 }
 p.selected {
@@ -32,17 +34,18 @@ p.dif {
 /* Our popup */
 
 button{
-  background-color: rgba(0,0,0,0);
+  border-radius: 5px;
+  background-color: rgba(74, 73, 73, 0.2);
   vertical-align: middle;
 }
 
 .highlightMenu {
-  background-image: linear-gradient(to bottom,rgba(49,49,47,.99), #6d6d5c);
+  background-image: linear-gradient(to bottom,rgba(49,49,47,.99), #31312d);
   background-repeat: repeat-x;
   border-radius: 5px;
   left: 50%;
   opacity: 0;
-  padding: 5px 15px;
+  padding: 0 15px;
   position: absolute;
   top: 20%;
   transform: translateX(-50%);
@@ -50,14 +53,14 @@ button{
 }
 
 .highlightMenu-popup * {
-  border: 1px solid;
+  border: none;
   cursor: pointer;
   color: #fff;
   display: inline-block;
   font-family: 'Itim', cursive;
   font-size: 1.1rem;
-  font-weight: 700;
-  margin: 10px 0 10px;
+  font-weight: inherit;
+  margin: 7px 3px 7px;
   padding: 5px 15px;
   text-align: center;
 }
@@ -69,7 +72,7 @@ button{
   position: absolute;
 }
 .highlightMenu-arrow{
-  background-color: #6d6d5c;
+  background-color: #31312d;
   display: block;
   height: 20px;
   position: relative;
