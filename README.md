@@ -1,3 +1,3 @@
 # PopupOnHover
 
-Stupid realization of tooltip when user select text (like on Medium.com)
+Stupid realization of tooltip when user selects text (like on Medium.com)
