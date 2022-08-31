@@ -1,16 +1,16 @@
 // Наш попап
-let highlightMenu = document.querySelector(".highlightMenu");
+const highlightMenu = document.querySelector(".highlightMenu");
 
 // Включить попап
 function turnOn() {
   highlightMenu.classList.add("reveal");
-};
+}
 // Выключить попап
 function turnOff() {
   highlightMenu.classList.remove("reveal");
-};
+}
 
-let getSelectedText = function() {
+let getSelectedText = function () {
   let text = "";
   // Метод возвращает объект Selection, представленный в виде диапазона текста, который пользователь выделил на странице.
   if (window.getSelection) {
@@ -24,21 +24,27 @@ let getSelectedText = function() {
   return text;
 };
 
-
 // Наш элемент
-let sel = document.querySelector('.selected');
+let sel = document.querySelector(".selected");
 
 // Навешиваем обработчик события "mouseup" на элемент (при отпускании кнопки мыши)
-document.addEventListener('mouseup', function() {
+document.addEventListener("mouseup", function (event) {
   thetext = getSelectedText();
+
+  // Горизонтальная и вертикальная позиции попапа на основе позиции курсора
+  highlightMenu.style.top = `${
+    event.clientY - highlightMenu.clientHeight - 20
+  }px`;
+  highlightMenu.style.left = `${
+    event.clientX - highlightMenu.clientWidth / 2
+  }px`;
+
   if (thetext.length > 0) {
     turnOn();
   } else {
     turnOff();
   }
 });
-
-
 
 /* function checkTextHighlighting(event) {
 

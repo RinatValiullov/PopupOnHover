@@ -3,8 +3,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -15,37 +15,37 @@ body {
   position: relative;
 }
 
-/*Text*/
-.wrapper{
+.wrapper {
   color: #40414c;
   padding: 10px;
 }
+
 p.selected {
   background-color: #ccc;
   padding: 10px;
 }
- 
+
 p.dif {
   background-color: #aaa;
   margin-top: 10px;
 }
 
 
-/* Our popup */
+/* Popup */
 
-button{
+button {
   border-radius: 5px;
   background-color: rgba(74, 73, 73, 0.2);
   vertical-align: middle;
 }
 
 .highlightMenu {
-  background-image: linear-gradient(to bottom,rgba(49,49,47,.99), #31312d);
+  background-image: linear-gradient(to bottom, hsl(60, 2%, 19%), hsl(60, 4%, 18%));
   background-repeat: repeat-x;
   border-radius: 5px;
   left: 50%;
   opacity: 0;
-  padding: 0 15px;
+  padding: 0 5px;
   position: absolute;
   top: 20%;
   transform: translateX(-50%);
@@ -65,13 +65,22 @@ button{
   text-align: center;
 }
 
-.highlightMenu-arrowWrap{
+.highlightMenu-popup button {
+  transition: background-color 0.3s;
+}
+
+.highlightMenu-popup button:hover {
+  background-color: hsl(60deg 10% 22%);
+}
+
+.highlightMenu-arrowWrap {
   bottom: -10px;
   left: 50%;
   margin-left: -10px;
   position: absolute;
 }
-.highlightMenu-arrow{
+
+.highlightMenu-arrow {
   background-color: #31312d;
   display: block;
   height: 20px;
